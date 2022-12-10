@@ -7,7 +7,6 @@ check two numbers
 count number of digits
 factorial of a number
 fibonacci series
-pattern
 multiplication table
 reverse the given number
 salary
