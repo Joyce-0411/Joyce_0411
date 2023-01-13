@@ -1,37 +1,15 @@
-from collections import Counter  
-def removeCommonWords(sent1, sent2):
-    sentence1 = list(sent1.split())
-    sentence2 = list(sent2.split())
-    frequency1 = Counter(sentence1)
-    frequency2 = Counter(sentence2)
-    word = 0
-    for i in range(len(sentence1)):
-        if sentence1[word] in frequency2.keys():
-            sentence1.pop(word)
-    
-            word = word-1
-        word += 1
-          
-    word = 0
-      
-    
-    for i in range(len(sentence2)):
-        
-        
-        if sentence2[word] in frequency1.keys():
-            
-              
-            sentence2.pop(word)
-              
-            
-            word = word-1
-              
-        word += 1
-          
-    
-    print(*sentence1)
-    print(*sentence2)
-sentence1 = "sky is blue in color"
-sentence2 = "Joyce like blue colour"
-  
-removeCommonWords(sentence1,sentence2)
+list1=str(input("enter first string:"))
+list2=str(input("enter second string:"))
+slist1=list1.split()
+slist2=list2.split()
+set1=set(slist1)    
+set2=set(slist2)
+common_words=set1.intersection(set2)
+print("common words are:",common_words)
+for i in common_words:
+    list1=list1.replace(i,' ')
+    list2=list2.replace(i,' ')
+    new_string1=list1
+    new_string2=list2
+print(new_string1)
+print(new_string2)
